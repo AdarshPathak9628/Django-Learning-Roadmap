@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Info: </h1><br>
+    {% for d in details %}
+    <table border="1px solid" align="center" height="80px" width="500px" cellpadding="40" cellspacing="0">
+        <tr> 
+            <td> {{d.eid}}</td>
+            <td> {{d.name}}</td>
+            <td> {{d.salary}}</td>
+        </tr>
+    </table>
+        
+    {% endfor %}
+</body>
+</html>
