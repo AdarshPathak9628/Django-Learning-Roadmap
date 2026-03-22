@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Django Project{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <h1>This is the Master Page Layout</h1>
+      <nav>
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'about' %}">About</a> |
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+    </header>
+
+    <hr />
+
+    <main>{% block blog %} {% endblock blog %}</main>
+
+    <hr />
+    <footer>
+      <p>© 2026 Django Learning Journey</p>
+    </footer>
+  </body>
+</html>

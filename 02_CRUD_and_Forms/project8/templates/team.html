@@ -1,0 +1,59 @@
+{% extends "index.html" %} {% load static %} {% block blog %}
+
+<section class="team py-5 text-center" id="team">
+  <div class="container">
+    <div class="text-center my-5">
+      <h1>Our <span class="text-primary">Team</span></h1>
+      <hr class="w-25 m-auto" />
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4 col-12">
+        <div class="card border-0 shadow-sm" data-aos="zoom-in-up">
+          <div class="card-body">
+            <img
+              src="{% static 'img/s4.jpg' %}"
+              class="img-fluid rounded-circle border border-primary p-2 mb-3"
+              style="width: 150px; height: 150px; object-fit: cover"
+            />
+            <h5 class="card-title">Andrew</h5>
+            <p class="card-text text-muted">Front-end Developer</p>
+            <a href="#" class="btn btn-sm btn-primary">View Portfolio</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12">
+        <div class="card border-0 shadow-sm" data-aos="zoom-in-down">
+          <div class="card-body">
+            <img
+              src="{% static 'img/s2.jpg' %}"
+              class="img-fluid rounded-circle border border-primary p-2 mb-3"
+              style="width: 150px; height: 150px; object-fit: cover"
+            />
+            <h5 class="card-title">Keren D'souza</h5>
+            <p class="card-text text-muted">Back-end Developer</p>
+            <a href="#" class="btn btn-sm btn-primary">View Portfolio</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12">
+        <div class="card border-0 shadow-sm" data-aos="zoom-in-left">
+          <div class="card-body">
+            <img
+              src="{% static 'img/s3.jpg' %}"
+              class="img-fluid rounded-circle border border-primary p-2 mb-3"
+              style="width: 150px; height: 150px; object-fit: cover"
+            />
+            <h5 class="card-title">Kristina</h5>
+            <p class="card-text text-muted">UI/UX Designer</p>
+            <a href="#" class="btn btn-sm btn-primary">View Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock blog %}

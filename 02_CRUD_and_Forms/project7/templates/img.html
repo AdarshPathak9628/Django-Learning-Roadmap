@@ -1,0 +1,12 @@
+{% extends "index.html" %} {% load static %} {% block blog %}
+<section>
+  <h2>Displaying Static Image</h2>
+  <div>
+    <img
+      src="{% static 'img/ramji.jpg' %}"
+      alt="Ram Ji Image"
+      style="max-width: 100%; height: auto"
+    />
+  </div>
+</section>
+{% endblock blog %}

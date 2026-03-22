@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Django Static Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header>
+      <h1>Master Page Layout</h1>
+      <nav>
+        <a href="{% url 'img' %}">View Image Page</a>
+      </nav>
+    </header>
+
+    <hr />
+
+    <main>
+      {% block blog %}
+      <p>Welcome to the main index page.</p>
+      {% endblock blog %}
+    </main>
+  </body>
+</html>

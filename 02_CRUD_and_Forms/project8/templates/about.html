@@ -1,0 +1,50 @@
+{% extends "index.html" %} {% load static %} {% block blog %}
+<section class="about py-5 bg-light" id="about">
+  <div class="container">
+    <div class="text-center my-5">
+      <h1>About <span class="text-primary">Me</span></h1>
+      <hr class="w-25 m-auto" />
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-12" data-aos="zoom-in">
+        <h2>What do you <span class="text-primary">want to know?</span></h2>
+        <p>
+          Learn more about my hobbies, qualifications, and future dreams through
+          the accordion below.
+        </p>
+
+        <div class="accordion" id="aboutAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#hobbies"
+              >
+                My Hobbies
+              </button>
+            </h2>
+            <div
+              id="hobbies"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#aboutAccordion"
+            >
+              <div class="accordion-body">
+                I enjoy coding and exploring new web technologies.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-12 text-end">
+        <img
+          src="{% static 'img/s4.jpg' %}"
+          class="img-fluid img-thumbnail adarsh"
+          alt="Profile Image"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock blog %}

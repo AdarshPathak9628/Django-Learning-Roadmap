@@ -1,0 +1,55 @@
+{% extends "index.html" %} {% load static %} {% block blog %}
+
+<section class="services py-5" id="services">
+  <div class="container">
+    <div class="text-center my-5">
+      <h1>Our <span class="text-primary">Services</span></h1>
+      <hr class="w-25 m-auto" />
+    </div>
+
+    <div class="row g-4" data-aos="fade-up">
+      <div class="col-md-4 col-12">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i class="fa fa-laptop bg-primary p-2 text-white rounded mb-3"></i>
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">
+              Custom websites built with Django and Python for high performance.
+            </p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12">
+        <div class="card h-100 bg-primary text-white shadow">
+          <div class="card-body">
+            <i class="fa fa-mobile bg-white p-2 text-primary rounded mb-3"></i>
+            <h5 class="card-title">App Development</h5>
+            <p class="card-text">
+              Building responsive mobile applications for Android and iOS.
+            </p>
+            <a href="#" class="btn btn-light text-primary">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <i
+              class="fa fa-paint-brush bg-primary p-2 text-white rounded mb-3"
+            ></i>
+            <h5 class="card-title">Graphics Design</h5>
+            <p class="card-text">
+              Creative logo and UI/UX designs to make your brand stand out.
+            </p>
+            <a href="#" class="btn btn-outline-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock blog %}
