@@ -1,0 +1,41 @@
+{% extends "index.html" %} {% block blog %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div
+      class="col-md-8 card bg-dark p-5 shadow-lg"
+      style="border: 1px solid #ffde59; border-radius: 20px"
+    >
+      <h2 class="text-center mb-4" style="color: #ffde59">
+        Hello, {{ user.username }}!
+      </h2>
+      <hr style="background-color: #ffde59" />
+
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <p><strong class="text-warning">Email:</strong> {{ user.email }}</p>
+          <p><strong class="text-warning">Phone:</strong> {{ user.phone }}</p>
+          <p><strong class="text-warning">Birthday:</strong> {{ user.dob }}</p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <strong class="text-warning">Occupation:</strong> {{ user.occupation
+            }}
+          </p>
+          <p>
+            <strong class="text-warning">Country:</strong> {{ user.country }}
+          </p>
+          <p>
+            <strong class="text-warning">Address:</strong> {{ user.address }}
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="{% url 'login' %}" class="btn btn-outline-danger px-5"
+          >Logout</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock blog %}
