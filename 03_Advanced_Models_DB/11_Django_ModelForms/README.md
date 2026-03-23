@@ -1,4 +1,4 @@
-Here is the simple, human-style README and notes for Project 11 in English, organized by clear headings and points.
+
 
 Project 11: Django Model Forms (Professional Guide)
 
