@@ -1,0 +1,34 @@
+===========================================================
+BATCH-3: ADVANCED MODELS & DATABASE STRUCTURE
+===========================================================
+
+11_Model_Forms
+   ├── Purpose: Creating forms directly from Models.
+   └── Tech: Django ModelForm, CSRF Protection.
+
+12_Custom_Validators
+   ├── Purpose: Backend data validation logic.
+   └── Tech: Clean methods, Regex Validators.
+
+13_Model_Relationships
+   ├── Purpose: Connecting different database tables.
+   └── Tech: ForeignKey, OneToOne, ManyToMany.
+
+14_Model_Inheritance
+   ├── Purpose: Code reusability in Models.
+   └── Tech: Abstract Base Classes, Multi-table Inheritance.
+
+15_User_Authentication (Current Project)
+   ├── Purpose: Professional Login/Signup System.
+   ├── App Name: auth_app
+   ├── Core Name: core
+   └── Key Features: 
+       - UserCreationForm (Signup)
+       - AuthenticationForm (Login)
+       - Password Hashing (Security)
+       - Profile Dashboard (Session Management)
+
+===========================================================
+Author: Adarsh Pathak 
+University: Lovely Professional University
+===========================================================
