@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Employee Info</title>
+    <style>
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ project_title }}</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>E-ID</th>
+          <th>Name</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for emp in employees %}
+        <tr>
+          <td>{{ emp.eid }}</td>
+          <td>{{ emp.name|title }}</td>
+          <td>₹{{ emp.salary }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

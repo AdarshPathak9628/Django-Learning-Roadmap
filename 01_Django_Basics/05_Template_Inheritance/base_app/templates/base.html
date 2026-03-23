@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{% block title %}My Project{% endblock %}</title>
+    <style>
+      nav {
+        background: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        margin: 10px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      footer {
+        background: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        margin-top: 50px;
+      }
+      .container {
+        padding: 20px;
+        min-height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">HOME</a> | <a href="/about/">ABOUT</a> |
+      <a href="/contect/">CONTACT</a>
+    </nav>
+
+    <div class="container">{% block content %} {% endblock %}</div>
+
+    <footer>
+      <p>&copy; 2025 Adarsh Pathak | Django Learning</p>
+    </footer>
+  </body>
+</html>
