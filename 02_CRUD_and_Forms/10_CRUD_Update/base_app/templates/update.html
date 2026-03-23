@@ -1,0 +1,8 @@
+<h2>Update Student Details</h2>
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="s_name" value="{{ student.name }}" />
+  <input type="number" name="s_roll" value="{{ student.roll_no }}" />
+  <input type="email" name="s_email" value="{{ student.email }}" />
+  <button type="submit">Update Now</button>
+</form>

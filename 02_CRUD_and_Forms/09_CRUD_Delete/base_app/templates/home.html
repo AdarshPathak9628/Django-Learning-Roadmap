@@ -1,0 +1,32 @@
+<body style="text-align: center; font-family: Arial">
+  <h2>Add New Student</h2>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="s_name" placeholder="Name" required />
+    <input type="number" name="s_roll" placeholder="Roll No" required />
+    <input type="email" name="s_email" placeholder="Email" required />
+    <button type="submit">Save</button>
+  </form>
+
+  <hr />
+
+  <h2>Student List</h2>
+  <table border="1" style="margin: auto; width: 60%">
+    <tr>
+      <th>Name</th>
+      <th>Roll No</th>
+      <th>Action</th>
+    </tr>
+    {% for s in students %}
+    <tr>
+      <td>{{ s.name }}</td>
+      <td>{{ s.roll_no }}</td>
+      <td><a href="/delete/{{ s.id }}/" style="color: red">Delete</a></td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="3">No students found. Please add some!</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
