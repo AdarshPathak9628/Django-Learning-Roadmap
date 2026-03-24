@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Edit User Profile</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+      }
+      .edit-container {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+        max-width: 500px;
+        width: 100%;
+      }
+      .edit-container h2 {
+        color: #667eea;
+        font-weight: bold;
+        margin-bottom: 30px;
+        border-bottom: 3px solid #667eea;
+        padding-bottom: 15px;
+      }
+      .form-control:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+      }
+      .btn-update {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        color: white;
+        font-weight: bold;
+        padding: 12px 30px;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .btn-update:hover {
+        color: white;
+        transform: scale(1.02);
+      }
+      .btn-back {
+        background: #6c757d;
+        border: none;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 15px;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        transition: background 0.2s;
+      }
+      .btn-back:hover {
+        background: #5a6268;
+        color: white;
+        text-decoration: none;
+      }
+      .form-label {
+        font-weight: bold;
+        color: #333;
+        margin-top: 15px;
+      }
+      .info-badge {
+        background: #e7f3ff;
+        border-left: 4px solid #667eea;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="edit-container">
+      <h2>Edit User Profile</h2>
+
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="info-badge">
+          <small><strong>Profile ID:</strong> {{ obj.id }}</small>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"> Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            value="{{ obj.email }}"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"> Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            value="{{ obj.password }}"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"> Profile Image</label>
+          {% if obj.image %}
+          <div class="mb-2">
+            <img
+              src="{{ obj.image.url }}"
+              alt="Current Image"
+              class="img-thumbnail"
+              style="max-height: 150px"
+            />
+            <small class="d-block mt-2 text-muted">Current Image</small>
+          </div>
+          {% endif %}
+          <input
+            type="file"
+            class="form-control"
+            name="image"
+            accept="image/*"
+          />
+          <small class="text-muted">Leave empty to keep current image</small>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"> Qualifications</label>
+          <small class="text-muted d-block mb-2"
+            >Current: {{ obj.qualification }}</small
+          >
+          <div class="row">
+            <div class="col-6">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="q1"
+                  value="10th"
+                />
+                <label class="form-check-label" for="q1">10th</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="q2"
+                  value="12th"
+                />
+                <label class="form-check-label" for="q2">12th</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="q3"
+                  value="UG"
+                />
+                <label class="form-check-label" for="q3">UG</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="q4"
+                  value="PG"
+                />
+                <label class="form-check-label" for="q4">PG</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-update">Update Profile</button>
+        <a href="{% url 'index' %}" class="btn btn-back">← Back to List</a>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

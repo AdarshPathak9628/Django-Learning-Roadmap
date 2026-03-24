@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <body>
+    <h2>Professional Image Gallery</h2>
+
+    {% for item in images %}
+    <div style="margin-bottom: 20px">
+      <p><strong>Title:</strong> {{ item.title }}</p>
+      <img src="{{ item.image.url }}" height="200" width="150" />
+    </div>
+    {% empty %}
+    <p>Database is empty. Please add images from Admin Panel.</p>
+    {% endfor %}
+  </body>
+</html>
