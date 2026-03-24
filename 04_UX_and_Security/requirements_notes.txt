@@ -1,0 +1,56 @@
+04_UX_and_Security Requirements Notes
+=====================================
+
+This file tells which extra packages are needed in this folder and why.
+
+1. Django
+   Why needed:
+   - Main framework for all projects
+   - Runs server, routes URLs, handles models, forms, templates
+
+2. django-simple-captcha
+   Used in:
+   - 20_Captcha_Form_Validation
+   - 23_Custom_User_Auth_With_Captcha
+
+   Why needed:
+   - Adds captcha image
+   - Validates captcha field
+   - Helps stop simple bot submissions
+
+3. django-widget-tweaks
+   Used in:
+   - 23_Custom_User_Auth_With_Captcha
+
+   Why needed:
+   - Adds CSS classes to Django form fields in template
+   - Helps style forms easily with Bootstrap
+
+4. Pillow
+   Used by:
+   - captcha package
+   - media/image related projects
+
+   Why needed:
+   - Image processing support
+   - Useful for media and captcha image handling
+
+How to install common packages
+------------------------------
+
+Activate environment first:
+
+E:\Python-Web-Development\.venv\Scripts\Activate.ps1
+
+Then install:
+
+pip install django
+pip install django-simple-captcha
+pip install django-widget-tweaks
+
+Important note
+--------------
+
+- Not every project needs all packages
+- Basic projects may run only with Django
+- Captcha and widget tweaks are needed only in specific projects
