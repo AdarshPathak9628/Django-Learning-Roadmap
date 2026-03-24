@@ -1,0 +1,33 @@
+04_UX_and_Security
+|
+|-- 16_Media_Files_Handling
+|   |-- Purpose: Upload and display media files
+|
+|-- 17_CRUD_with_Media_Files
+|   |-- Purpose: CRUD operations with image upload
+|
+|-- 18_Cookies_Management
+|   |-- Purpose: Set and get cookies in Django
+|
+|-- 19_Django_ModelForm
+|   |-- Purpose: Use Django ModelForm with database model
+|
+|-- 20_Captcha_Form_Validation
+|   |-- Purpose: Add captcha in form validation
+|
+|-- 21_Email_With_Attachment
+|   |-- Purpose: Send email with file attachment
+|
+|-- 22_Django_User_Authentication
+|   |-- Purpose: Signup, login, logout, protected home
+|
+|-- 23_Custom_User_Auth_With_Captcha
+|   |-- Purpose: Custom user model with captcha-based auth
+|
+|-- README.md
+|   |-- Short notes for all projects in this folder
+|
+|-- structure.txt
+|   |-- Folder summary and project purpose
+
+Total projects: 8
